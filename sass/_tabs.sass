@@ -1,0 +1,147 @@
+.tabs-container
+	width: 500px
+	height: 70%
+	position: absolute
+	top: 49%
+	transform: translateY(-50%)
+	z-index: 15
+	h3
+		font-size: 2.2rem
+		line-height: 2.2rem
+		margin-left: 1px
+		margin-right: 5px
+		margin-bottom: 30px
+		transform: scale(.9, 1)
+		text-transform: uppercase
+		color: $caption-text-color
+		font-weight: bold
+
+.tabs-wrapper
+	z-index: 20
+	position: relative
+	height: 530px
+	margin-top: 20px
+	padding: 40px 20px 20px 10px
+	background-color: rgba(234, 243, 249, 0.25)
+	box-shadow: 0px 3px 11px 0px rgba(58, 59, 68, 0.28)
+	
+ul.tabs
+	position: relative
+	width: 280px
+	list-style: none
+	li
+		position: relative
+		background: none
+		font-size: 1.6rem
+		transform: scale(.9, 1)
+		color: $main-text-color
+		display: block
+		padding: 5px 0
+		cursor: pointer
+		.animate-arrow
+			display: none
+	li.current
+		color: #3d4975
+		transition: all .35s ease-in-out .1s
+		.animate-arrow
+			display: block
+			position: absolute
+			top: 9px
+			right: -110px
+			width: 100px
+			height: 40px
+			.arrow-part
+				display: inline-block
+				position: absolute
+			span:nth-child(1)
+				top: 0
+				left: 0
+				width: 20px
+				height: 40px
+				background-image: url('../img/tabs-active-link-icon.png')
+				background-size: 16px
+				background-repeat: no-repeat
+				animation: active-tab 1300ms infinite
+				animation-timing-function: ease-in-out
+			span:nth-child(2)
+				top: 0
+				left: 14px
+				width: 20px
+				height: 40px
+				background-image: url('../img/tabs-active-link-icon.png')
+				background-size: 16px
+				background-repeat: no-repeat
+				animation: active-tab-1 1300ms infinite
+				animation-timing-function: ease-in-out
+			span:nth-child(3)
+				top: 0
+				left: 28px
+				width: 20px
+				height: 40px
+				background-image: url('../img/tabs-active-link-icon.png')
+				background-size: 16px
+				background-repeat: no-repeat
+				animation: active-tab-2 1300ms infinite
+				animation-timing-function: ease-in-out
+@keyframes active-tab-2 
+  0%   { opacity: 1 }
+  40% { opacity: 0 }
+  100% { opacity: 1}
+@keyframes active-tab-1
+  33%   { opacity: 1 }
+  80% { opacity: 0 }
+  100% { opacity: 1}
+@keyframes active-tab
+  0%   { opacity: 0 }
+  40%   { opacity: 1 }
+  100% { opacity: 0 }
+
+.tab-content
+	z-index: 30
+	display: none
+	position: absolute
+	top: 260px
+	left: -1px
+	width: 80%
+	animation: fadeEffect 1s
+	animation-timing-function: ease-in-out
+.tab-inner-wrapper
+	animation-delay: .1s
+	padding: 30px 30px 70px 30px
+	box-shadow: 0px 3px 11px 0px rgba(58, 59, 68, 0.28)
+	color: $main-text-color
+	background: rgb(224, 253, 255)
+	background: -moz-linear-gradient(top, rgbargb(224, 253, 255) 0%, rgb(255, 255, 255) 49%)
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgb(224, 253, 255)), color-stop(49%, rgb(255, 255, 255)))
+	background: -webkit-linear-gradient(top, rgb(224, 253, 255) 0%, rgb(255, 255, 255) 49%)
+	background: -o-linear-gradient(top, rgb(224, 253, 255) 0%, rgb(255, 255, 255) 49%)
+	background: -ms-linear-gradient(top, rgb(224, 253, 255) 0%, rgb(255, 255, 255) 49%)
+	background: linear-gradient(to bottom, rgb(224, 253, 255) 0%, rgb(255, 255, 255) 49%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52f3ff', endColorstr='#edf5fb', GradientType=0 );
+	h4
+		font-size: 1.8rem
+		font-weight: bold
+		text-transform: uppercase
+		color: #384470
+	p
+		margin-bottom: 16px
+		color: $main-text-color
+
+	.legendary-oxygen-text-color
+		color: $legendary-oxygen-color
+@keyframes fadeEffect 
+    from {opacity: 0}
+    to {opacity: 1}
+.tab-content.current
+	display: inherit
+	
+// Type of skin Class
+.skin-type
+	width: 220px
+	padding: 6px 10px
+	font-size: 1.2rem
+	color: #fff
+	text-align: left
+	margin: 20px 0
+.legendary-oxygen-bg
+	background-color: $legendary-oxygen-color
